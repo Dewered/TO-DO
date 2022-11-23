@@ -1,0 +1,63 @@
+.list-group-item {
+  background-color: white;
+}
+
+body {
+  background: #e5e5e5;
+}
+
+.switch {
+  position: relative;
+}
+.switch label {
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+.switch .indicator {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background: #ffffff;
+  border: 2px #e8edfc;
+  display: block;
+  border-radius: 30px;
+  margin-right: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+.switch .indicator:before {
+  width: 26px;
+  height: 26px;
+  content: "";
+  display: block;
+  background: #214393;
+  border-radius: 26px;
+  transform: translate(2px, 2px);
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s;
+}
+.switch .indicator:after {
+  width: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  height: 26px;
+  background: #e8edfc;
+  border-radius: 26px;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.switch input {
+  visibility: hidden;
+  position: absolute;
+}
+.switch input:checked + .indicator:before {
+  transform: translate(32px, 2px);
+}
+.switch input:checked + .indicator:after {
+  width: 54px;
+}
